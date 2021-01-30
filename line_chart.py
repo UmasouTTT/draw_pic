@@ -21,7 +21,7 @@ plt.plot(x, y_2, label="同桌")
 
 #设置x轴刻度
 x_ticks = ["{}岁".format(i) for i in x]
-plt.xticks(x, x_ticks, fontproperties=font)
+plt.xticks(x, x_ticks, fontproperties=font, rotation=45)
 
 
 #绘制网格
@@ -29,6 +29,11 @@ plt.grid(alpha=0.4)
 
 #添加图例
 plt.legend(prop=font, loc="upper left")
+
+#添加描述信息
+plt.xlabel("年龄")
+plt.ylabel("人数")
+plt.title("人数随年龄变化折线图", fontproperties=font)
 
 #展示
 plt.show()
